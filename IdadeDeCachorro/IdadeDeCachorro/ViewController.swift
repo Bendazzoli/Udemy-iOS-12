@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBAction func calcularIdade(_ sender: Any) {
         let idadeCalculada = Int(idade.text!)! * 7
-        resultado.text = "A idade do cachorro em anos humanos é de " + String(idadeCalculada) + " anos"
+        resultado.text = "A idade do cachorro é de " + String(idadeCalculada) + " anos humanos!"
         
         idade.text = nil
     }
