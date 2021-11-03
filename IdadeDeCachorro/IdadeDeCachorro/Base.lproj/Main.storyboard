@@ -15,36 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cachorro.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRU-Mo-lQS">
-                                <rect key="frame" x="20" y="79" width="374" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cachorro.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRU-Mo-lQS">
+                                <rect key="frame" x="123.5" y="60" width="167" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="2AC-eW-OcP"/>
+                                    <constraint firstAttribute="height" constant="160" id="cub-Y5-oYh"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite a idade do seu cachorro, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-m1-bur">
-                                <rect key="frame" x="20" y="284" width="374" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a idade do seu cachorro, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-m1-bur">
+                                <rect key="frame" x="20" y="252" width="374" height="88"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.83529411764705885" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="aNz-kf-0l5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ww-H8-mX5">
-                                <rect key="frame" x="151" y="396" width="113" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ww-H8-mX5">
+                                <rect key="frame" x="149" y="372" width="116.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-ke-DKq">
-                                <rect key="frame" x="172" y="438" width="72" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-ke-DKq">
+                                <rect key="frame" x="171" y="438" width="72" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Calcular"/>
                                 <connections>
                                     <action selector="calcularIdade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAV-lB-hHY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-q5-G34">
-                                <rect key="frame" x="20" y="500" width="374" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-q5-G34">
+                                <rect key="frame" x="20" y="504" width="374" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="rnc-2L-VMZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,6 +57,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.25490196078431371" green="0.79607843137254897" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GAZ-q5-G34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6ve-3Y-wiN"/>
+                            <constraint firstItem="GAZ-q5-G34" firstAttribute="top" secondItem="3mT-ke-DKq" secondAttribute="bottom" constant="32" id="7KS-4V-12d"/>
+                            <constraint firstItem="WRU-Mo-lQS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CU9-Td-lVn"/>
+                            <constraint firstItem="6Ww-H8-mX5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MUb-bk-oco"/>
+                            <constraint firstItem="3mT-ke-DKq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Onj-h6-Gp0"/>
+                            <constraint firstItem="6Ww-H8-mX5" firstAttribute="top" secondItem="9eL-m1-bur" secondAttribute="bottom" constant="32" id="PbY-UR-tnb"/>
+                            <constraint firstItem="3mT-ke-DKq" firstAttribute="top" secondItem="6Ww-H8-mX5" secondAttribute="bottom" constant="32" id="RbX-Qz-oCB"/>
+                            <constraint firstItem="9eL-m1-bur" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j0e-ab-nBM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9eL-m1-bur" secondAttribute="trailing" constant="20" id="nz3-He-Hbq"/>
+                            <constraint firstItem="WRU-Mo-lQS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ojF-0u-iAj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GAZ-q5-G34" secondAttribute="trailing" constant="20" id="uqM-Kb-KdY"/>
+                            <constraint firstItem="9eL-m1-bur" firstAttribute="top" secondItem="WRU-Mo-lQS" secondAttribute="bottom" constant="32" id="xD6-zn-9iV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="idade" destination="6Ww-H8-mX5" id="Tha-Ea-qWZ"/>
