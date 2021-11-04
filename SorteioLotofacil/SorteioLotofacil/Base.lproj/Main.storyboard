@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SorteioLotofacil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotofacil" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-U4-BUY">
+                                <rect key="frame" x="-312" y="52" width="1038" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="205" id="vla-mI-zHX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czn-lX-doP">
+                                <rect key="frame" x="84.5" y="297" width="245" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="avP-bG-NjB"/>
+                                    <constraint firstAttribute="height" constant="54" id="fHI-ES-lgr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <state key="normal" title="SORTEAR">
+                                    <color key="titleColor" red="0.57619208099999997" green="0.0" blue="0.53728395699999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortearResultado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2E-bG-pab"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qi-M1-lMG">
+                                <rect key="frame" x="8" y="391" width="398" height="320"/>
+                                <color key="backgroundColor" red="0.62319779399999997" green="0.0" blue="0.57650148869999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="WYh-Vf-aBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.57619208099999997" green="0.0" blue="0.53728395699999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5Qi-M1-lMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="1qE-jn-kh7"/>
+                            <constraint firstItem="Lex-U4-BUY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I3d-Xw-HVi"/>
+                            <constraint firstItem="czn-lX-doP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T9e-5D-dAg"/>
+                            <constraint firstItem="5Qi-M1-lMG" firstAttribute="top" secondItem="czn-lX-doP" secondAttribute="bottom" constant="40" id="bx3-yH-jCc"/>
+                            <constraint firstItem="Lex-U4-BUY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="k9C-eP-Oca"/>
+                            <constraint firstItem="czn-lX-doP" firstAttribute="top" secondItem="Lex-U4-BUY" secondAttribute="bottom" constant="40" id="oUm-qO-rUL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Qi-M1-lMG" secondAttribute="trailing" constant="8" id="ttd-cu-tF6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultado" destination="5Qi-M1-lMG" id="4DR-03-spc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lotofacil" width="1038" height="576"/>
+    </resources>
+</document>
