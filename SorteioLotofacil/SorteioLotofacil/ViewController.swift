@@ -33,26 +33,33 @@ class ViewController: UIViewController {
         countResultados += 1
                 
         while countResultados != 15 {
-            numeroSorteado = Int(1 + arc4random_uniform(25))
-            
-            for valor in numerosSorteados {
-                if valor == numeroSorteado {
-                    exiteNumeroSorteado = true
-                }
-            }
-            
-            if !exiteNumeroSorteado {
-                numerosSorteados.append(numeroSorteado)
-                countResultados += 1
-            }
-            exiteNumeroSorteado = false
+            sortearNumeros()
         }
         
+        mostrarResultado()
+    }
+    
+    func sortearNumeros() {
+        numeroSorteado = Int(1 + arc4random_uniform(25))
+        
+        for valor in numerosSorteados {
+            if valor == numeroSorteado {
+                exiteNumeroSorteado = true
+            }
+        }
+        
+        if !exiteNumeroSorteado {
+            numerosSorteados.append(numeroSorteado)
+            countResultados += 1
+        }
+        exiteNumeroSorteado = false
+    }
+    
+    func mostrarResultado(){
         numerosSorteados.sort()
         for numero in numerosSorteados {
             resultado.text = resultado.text! + String(numero) + "   "
         }
-        
     }
     
     func limparResultado(){
@@ -66,7 +73,5 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 }
 
