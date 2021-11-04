@@ -46,12 +46,24 @@
                                 <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-UW-Sig">
+                                <rect key="frame" x="343" y="719" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Limpar">
+                                    <color key="titleColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="limpar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnu-BB-tf4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.57619208099999997" green="0.0" blue="0.53728395699999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5Qi-M1-lMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="1qE-jn-kh7"/>
                             <constraint firstItem="Lex-U4-BUY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I3d-Xw-HVi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XLl-UW-Sig" secondAttribute="trailing" constant="20" id="Rim-kd-N9a"/>
+                            <constraint firstItem="XLl-UW-Sig" firstAttribute="top" secondItem="5Qi-M1-lMG" secondAttribute="bottom" constant="8" id="S5N-XW-J7e"/>
                             <constraint firstItem="czn-lX-doP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T9e-5D-dAg"/>
                             <constraint firstItem="5Qi-M1-lMG" firstAttribute="top" secondItem="czn-lX-doP" secondAttribute="bottom" constant="40" id="bx3-yH-jCc"/>
                             <constraint firstItem="Lex-U4-BUY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="k9C-eP-Oca"/>

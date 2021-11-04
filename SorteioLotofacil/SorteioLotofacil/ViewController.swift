@@ -16,12 +16,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultado: UILabel!
     
+    @IBAction func limpar(_ sender: Any) {
+        limparResultado()
+    }
+    
     @IBAction func sortearResultado(_ sender: Any) {
-        resultado.text = ""
-        numerosSorteados = []
-        exiteNumeroSorteado = false
-        numeroSorteado = 0
-        countResultados = 0
+        limparResultado()
         
         //Sorteando o primeiro número
         numeroSorteado = Int(1 + arc4random_uniform(25))
@@ -53,6 +53,14 @@ class ViewController: UIViewController {
             resultado.text = resultado.text! + String(numero) + "   "
         }
         
+    }
+    
+    func limparResultado(){
+        resultado.text = ""
+        numerosSorteados = []
+        exiteNumeroSorteado = false
+        numeroSorteado = 0
+        countResultados = 0
     }
 
     override func viewDidLoad() {
