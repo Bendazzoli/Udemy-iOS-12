@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlcoolOuGasolina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-alcool-gasolina" translatesAutoresizingMaskIntoConstraints="NO" id="My0-gO-t7C">
+                                <rect key="frame" x="8" y="52" width="398" height="106"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Álcool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-ZR-jJR">
+                                <rect key="frame" x="16" y="228" width="118" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Gasolina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl6-gC-yZC">
+                                <rect key="frame" x="257" y="228" width="141" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 1.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-Bw-4gC">
+                                <rect key="frame" x="16" y="272" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6yL-n8-ydG"/>
+                                    <constraint firstAttribute="width" constant="140" id="n6e-Ce-2E8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 2.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JJ-fa-t0z">
+                                <rect key="frame" x="258" y="272" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="DTt-rk-6ak"/>
+                                    <constraint firstAttribute="width" constant="140" id="PCP-es-xeA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-cc-zhx">
+                                <rect key="frame" x="140.5" y="366" width="133" height="46"/>
+                                <color key="backgroundColor" red="0.21942825792880116" green="0.28581774713357799" blue="0.10471657650275563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="jqo-F6-Se1"/>
+                                    <constraint firstAttribute="width" constant="133" id="toA-zG-ZKj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="CALCULAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcularPreco:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3j-gA-Lbs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-xi-S1P">
+                                <rect key="frame" x="16" y="462" width="382" height="107"/>
+                                <color key="backgroundColor" red="0.30744260315390376" green="0.40046142204184032" blue="0.14671919276603992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="ZIn-wW-2Sm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-5y-AvY">
+                                <rect key="frame" x="342" y="577" width="52" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Limpar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.41176470590000003" green="0.4941176471" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XOl-xi-S1P" secondAttribute="trailing" constant="16" id="96h-gl-mSL"/>
+                            <constraint firstItem="fl6-gC-yZC" firstAttribute="top" secondItem="My0-gO-t7C" secondAttribute="bottom" constant="70" id="9WR-v0-6Ee"/>
+                            <constraint firstItem="KlP-ZR-jJR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CvS-H9-8DG"/>
+                            <constraint firstItem="aFo-cc-zhx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EzG-Pg-c6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fl6-gC-yZC" secondAttribute="trailing" constant="16" id="GfP-tM-C75"/>
+                            <constraint firstItem="2JJ-fa-t0z" firstAttribute="top" secondItem="fl6-gC-yZC" secondAttribute="bottom" constant="20" id="I15-h8-mEb"/>
+                            <constraint firstItem="XOl-xi-S1P" firstAttribute="top" secondItem="aFo-cc-zhx" secondAttribute="bottom" constant="50" id="M9i-jv-0ta"/>
+                            <constraint firstItem="My0-gO-t7C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="SBs-Rd-xhs"/>
+                            <constraint firstItem="mbh-5y-AvY" firstAttribute="top" secondItem="XOl-xi-S1P" secondAttribute="bottom" constant="8" id="SG6-Zd-8bz"/>
+                            <constraint firstItem="Mms-Bw-4gC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aSH-BX-jcq"/>
+                            <constraint firstItem="My0-gO-t7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="g0k-JM-wgt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="My0-gO-t7C" secondAttribute="trailing" constant="8" id="hdz-16-sl8"/>
+                            <constraint firstItem="KlP-ZR-jJR" firstAttribute="top" secondItem="My0-gO-t7C" secondAttribute="bottom" constant="70" id="jVk-lo-ufa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mbh-5y-AvY" secondAttribute="trailing" constant="20" id="jxT-ed-oSt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2JJ-fa-t0z" secondAttribute="trailing" constant="16" id="mUY-WG-QXY"/>
+                            <constraint firstItem="Mms-Bw-4gC" firstAttribute="top" secondItem="KlP-ZR-jJR" secondAttribute="bottom" constant="20" id="oMR-Vf-nQd"/>
+                            <constraint firstItem="XOl-xi-S1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qLv-N4-83a"/>
+                            <constraint firstItem="aFo-cc-zhx" firstAttribute="top" secondItem="Mms-Bw-4gC" secondAttribute="bottom" constant="60" id="rUN-sA-Qex"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="precoAlcool" destination="Mms-Bw-4gC" id="35H-5o-nNz"/>
+                        <outlet property="precoGasolina" destination="2JJ-fa-t0z" id="AnM-Rr-kdg"/>
+                        <outlet property="resultado" destination="XOl-xi-S1P" id="h7O-Dd-Iyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-alcool-gasolina" width="407" height="106"/>
+    </resources>
+</document>
