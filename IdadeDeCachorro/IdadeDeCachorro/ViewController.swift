@@ -14,8 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var idade: UITextField!
     
     @IBAction func calcularIdade(_ sender: Any) {
-        let idadeCalculada = Int(idade.text!)! * 7
-        resultado.text = "A idade do cachorro é de " + String(idadeCalculada) + " anos humanos!"
+        if idade.text != nil && idade.text != "" {
+            let idadeCalculada = Int(idade.text!)! * 7
+            resultado.text = "A idade do cachorro é de " + String(idadeCalculada) + " anos humanos!"
+            resultado.textColor = UIColor.black
+        }else{
+            resultado.text = "A idade do cachorro é obrigatório!"
+            resultado.textColor = UIColor.red
+        }
         
         idade.text = nil
     }
