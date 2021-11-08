@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ATMConsultoria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-kK-NM0">
+                                <rect key="frame" x="20" y="84" width="335" height="418"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hK0-H8-6Jg">
+                                        <rect key="frame" x="20" y="0.0" width="295" height="96"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-Kn-ZCc">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="96"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zjs-Kn-ZCc" firstAttribute="top" secondItem="hK0-H8-6Jg" secondAttribute="top" id="7x6-1Y-JiR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zjs-Kn-ZCc" secondAttribute="trailing" id="L7L-EY-kc9"/>
+                                            <constraint firstItem="Zjs-Kn-ZCc" firstAttribute="leading" secondItem="hK0-H8-6Jg" secondAttribute="leading" id="Wpt-Af-riV"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zjs-Kn-ZCc" secondAttribute="bottom" id="iHO-2a-wOh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIN-FL-thK">
+                                        <rect key="frame" x="42.666666666666657" y="156" width="249.99999999999997" height="262"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8pj-QZ-EGd">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="121"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-UQ-4KX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="121"/>
+                                                        <state key="normal" image="menu_cliente"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KT-tC-1WV">
+                                                        <rect key="frame" x="135" y="0.0" width="115" height="121"/>
+                                                        <state key="normal" image="menu_contato"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eiI-fL-TId">
+                                                <rect key="frame" x="0.0" y="141" width="250" height="121"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEZ-0w-Kc7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="121"/>
+                                                        <state key="normal" image="menu_empresa"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-tj-Xvu">
+                                                        <rect key="frame" x="135" y="0.0" width="115" height="121"/>
+                                                        <state key="normal" image="menu_servico"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hK0-H8-6Jg" secondAttribute="trailing" constant="20" id="a1b-cQ-GIm"/>
+                                    <constraint firstItem="hK0-H8-6Jg" firstAttribute="leading" secondItem="BaR-kK-NM0" secondAttribute="leading" constant="20" id="gcZ-gf-BTl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BaR-kK-NM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2Du-dk-d2u"/>
+                            <constraint firstItem="BaR-kK-NM0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="FJn-8I-shW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BaR-kK-NM0" secondAttribute="trailing" constant="20" id="mv8-yN-EgA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="266" height="96"/>
+        <image name="menu_cliente" width="115" height="121"/>
+        <image name="menu_contato" width="115" height="121"/>
+        <image name="menu_empresa" width="115" height="121"/>
+        <image name="menu_servico" width="115" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
