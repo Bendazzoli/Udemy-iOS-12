@@ -14,6 +14,7 @@
 		48287A3927A5C0DB00C528D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48287A3827A5C0DB00C528D5 /* Assets.xcassets */; };
 		48287A3C27A5C0DB00C528D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48287A3A27A5C0DB00C528D5 /* LaunchScreen.storyboard */; };
 		48287A4427A5C22500C528D5 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48287A4327A5C22500C528D5 /* Filme.swift */; };
+		48287A4827A5D72500C528D5 /* FilmeCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48287A4727A5D72500C528D5 /* FilmeCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		48287A3B27A5C0DB00C528D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48287A3D27A5C0DB00C528D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48287A4327A5C22500C528D5 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		48287A4727A5D72500C528D5 /* FilmeCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		48287A4627A5C3F000C528D5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				48287A4727A5D72500C528D5 /* FilmeCustomTableViewCell.swift */,
 				48287A4327A5C22500C528D5 /* Filme.swift */,
 			);
 			path = Domain;
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48287A4827A5D72500C528D5 /* FilmeCustomTableViewCell.swift in Sources */,
 				48287A3427A5C0DA00C528D5 /* TableViewController.swift in Sources */,
 				48287A3027A5C0DA00C528D5 /* AppDelegate.swift in Sources */,
 				48287A3227A5C0DA00C528D5 /* SceneDelegate.swift in Sources */,

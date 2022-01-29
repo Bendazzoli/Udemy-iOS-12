@@ -36,9 +36,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let filmeTableView = tableView.dequeueReusableCell(withIdentifier: filmesViewCell, for: indexPath)
-        filmeTableView.textLabel?.text = filmes[indexPath.row].titulo
+        let filmeTableView = tableView.dequeueReusableCell(withIdentifier: filmesViewCell, for: indexPath) as! FilmeCustomTableViewCell
+        
+        //TableViewCell Customizada
+        filmeTableView.titulo.text = filmes[indexPath.row].titulo
+        filmeTableView.descricao.text = filmes[indexPath.row].decricao
         filmeTableView.imageView?.image = filmes[indexPath.row].imagem
+        
+        //filmeTableView.textLabel?.text = filmes[indexPath.row].titulo
+        //filmeTableView.imageView?.image = filmes[indexPath.row].imagem
+        
         return filmeTableView
     }
     
