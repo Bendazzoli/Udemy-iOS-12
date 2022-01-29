@@ -15,7 +15,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filmes.append(Filme(titulo: "007 Spectre", descricao: "Sinopse do filme 007 Spectre", imagem: UIImage(named: "filme1")!))
+        filmes.append(Filme(titulo: "007 - Spectre", descricao: "Sinopse do filme 007 Spectre mais texto pra testar o tamanho do campo Sinopse do filme 007 Spectre quando tem bastante conteúdo Sinopse do filme 007 Spectre não sabemos o comportamento Sinopse do filme 007 Spectre como é que vai ser Sinopse do filme 007 Spectre então vamos encher de Sinopse do filme 007 Spectre informação Sinopse do filme 007 Spectre", imagem: UIImage(named: "filme1")!))
         filmes.append(Filme(titulo: "Star Wars", descricao: "Sinopse do filme Star Wars", imagem: UIImage(named: "filme2")!))
         filmes.append(Filme(titulo: "Impacto Mortal", descricao: "Sinopse do filme Impacto Mortal", imagem: UIImage(named: "filme3")!))
         filmes.append(Filme(titulo: "Deadpool", descricao: "Sinopse do filme Deadpool", imagem: UIImage(named: "filme4")!))
@@ -52,5 +52,14 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetalheFilmeViewController" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let detalhesFilmesViewController = segue.destination as! DetalhesFilmesViewController
+                detalhesFilmesViewController.filme = self.filmes[indexPath.row]
+            }
+        }
     }
 }
