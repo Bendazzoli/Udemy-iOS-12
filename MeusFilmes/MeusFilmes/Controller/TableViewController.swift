@@ -43,8 +43,9 @@ class TableViewController: UITableViewController {
         filmeTableView.descricao.text = filmes[indexPath.row].decricao
         filmeTableView.imageView?.image = filmes[indexPath.row].imagem
         
-        //filmeTableView.textLabel?.text = filmes[indexPath.row].titulo
-        //filmeTableView.imageView?.image = filmes[indexPath.row].imagem
+        //Arredondando a imagem via código
+        filmeTableView.imageView?.layer.cornerRadius = 45
+        filmeTableView.imageView?.clipsToBounds = true
         
         return filmeTableView
     }
