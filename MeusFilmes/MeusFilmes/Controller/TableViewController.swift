@@ -15,12 +15,16 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filmes.append(Filme(titulo: "Filme 1", descricao: "Descricao Filme 1"))
-        filmes.append(Filme(titulo: "Filme 2", descricao: "Descricao Filme 2"))
-        filmes.append(Filme(titulo: "Filme 3", descricao: "Descricao Filme 3"))
-        filmes.append(Filme(titulo: "Filme 4", descricao: "Descricao Filme 4"))
-        filmes.append(Filme(titulo: "Filme 5", descricao: "Descricao Filme 5"))
-        filmes.append(Filme(titulo: "Filme 6", descricao: "Descricao Filme 6"))
+        filmes.append(Filme(titulo: "007 Spectre", descricao: "Sinopse do filme 007 Spectre", imagem: UIImage(named: "filme1")!))
+        filmes.append(Filme(titulo: "Star Wars", descricao: "Sinopse do filme Star Wars", imagem: UIImage(named: "filme2")!))
+        filmes.append(Filme(titulo: "Impacto Mortal", descricao: "Sinopse do filme Impacto Mortal", imagem: UIImage(named: "filme3")!))
+        filmes.append(Filme(titulo: "Deadpool", descricao: "Sinopse do filme Deadpool", imagem: UIImage(named: "filme4")!))
+        filmes.append(Filme(titulo: "O Regresso", descricao: "Sinopse do filme O Regresso", imagem: UIImage(named: "filme5")!))
+        filmes.append(Filme(titulo: "A Herdeira", descricao: "Sinopse do filme A Herdeira", imagem: UIImage(named: "filme6")!))
+        filmes.append(Filme(titulo: "Caçadores de Emoção", descricao: "Sinopse do filme Caçadores de Emoção", imagem: UIImage(named: "filme7")!))
+        filmes.append(Filme(titulo: "Regresso do Mal", descricao: "Sinopse do filme Regresso do Mal", imagem: UIImage(named: "filme8")!))
+        filmes.append(Filme(titulo: "Tarzan", descricao: "Sinopse do filme Tarzan", imagem: UIImage(named: "filme9")!))
+        filmes.append(Filme(titulo: "Hardcore", descricao: "Sinopse do filme Hardcore", imagem: UIImage(named: "filme10")!))
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,6 +38,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let filmeTableView = tableView.dequeueReusableCell(withIdentifier: filmesViewCell, for: indexPath)
         filmeTableView.textLabel?.text = filmes[indexPath.row].titulo
+        filmeTableView.imageView?.image = filmes[indexPath.row].imagem
         return filmeTableView
     }
     
