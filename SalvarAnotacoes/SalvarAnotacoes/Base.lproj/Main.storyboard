@@ -36,6 +36,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="botao_salvar"/>
+                                        <connections>
+                                            <action selector="anotacoesSalvar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BsT-LT-XET"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,6 +58,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Minhas Anotações" id="ZbS-9n-WeH"/>
+                    <connections>
+                        <outlet property="anotacoesTextView" destination="0b9-GK-voc" id="V1S-41-mzk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
