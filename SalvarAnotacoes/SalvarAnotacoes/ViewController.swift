@@ -17,10 +17,19 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(anotacoesTextView.text, forKey:  anotacoesKey)
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         anotacoesTextView.text = UserDefaults.standard.object(forKey: anotacoesKey) as? String
+    }
+    
+    //Esconde a barra de status do app
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
+    //Esconde o teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
 
