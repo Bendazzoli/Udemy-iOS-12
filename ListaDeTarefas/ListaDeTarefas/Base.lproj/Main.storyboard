@@ -11,7 +11,7 @@
         <!--Lista de Tarefas-->
         <scene sceneID="fQV-eO-UoP">
             <objects>
-                <tableViewController id="6CR-9v-jIx" customClass="TableViewController" customModule="ListaDeTarefas" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6CR-9v-jIx" customClass="TarefasTableViewController" customModule="ListaDeTarefas" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="h1Z-JI-WAX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,55 +52,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uTo-Gs-gHu">
-                                <rect key="frame" x="16" y="96" width="396" height="90"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nova Tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-ho-0NO">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lj-KC-5qD">
-                                        <rect key="frame" x="0.0" y="40.333333333333343" width="396" height="49.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nova tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxA-tX-5KI">
+                                <rect key="frame" x="16" y="120" width="396" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="mwH-ac-jTA"/>
+                                    <constraint firstAttribute="height" constant="20" id="OZS-fl-Bmc"/>
                                 </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te7-sm-Zsg">
-                                <rect key="frame" x="16" y="202" width="396" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-ze-w2z">
+                                <rect key="frame" x="16" y="152" width="396" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cXu-1j-TQD"/>
+                                    <constraint firstAttribute="height" constant="34" id="k92-Ki-g6e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZO-ao-FZb">
+                                <rect key="frame" x="165" y="218" width="98" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RWg-PA-VVD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Adicionar Tarefa">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Adicionar">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addNovaTarefaButton:" destination="jEI-M0-q1D" eventType="touchUpInside" id="6IH-W9-hlY"/>
+                                    <action selector="adicionarTarefaButton:" destination="jEI-M0-q1D" eventType="touchUpInside" id="VSE-ZZ-NZT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yt3-hQ-zge"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yt3-hQ-zge" firstAttribute="trailing" secondItem="uTo-Gs-gHu" secondAttribute="trailing" constant="16" id="0uS-uF-QV9"/>
-                            <constraint firstItem="te7-sm-Zsg" firstAttribute="leading" secondItem="yt3-hQ-zge" secondAttribute="leading" constant="16" id="7TO-v2-wbb"/>
-                            <constraint firstItem="yt3-hQ-zge" firstAttribute="trailing" secondItem="te7-sm-Zsg" secondAttribute="trailing" constant="16" id="Hyv-OJ-uKd"/>
-                            <constraint firstItem="uTo-Gs-gHu" firstAttribute="leading" secondItem="yt3-hQ-zge" secondAttribute="leading" constant="16" id="WeQ-CE-9To"/>
-                            <constraint firstItem="uTo-Gs-gHu" firstAttribute="top" secondItem="yt3-hQ-zge" secondAttribute="top" constant="8" id="cNd-bu-eVc"/>
-                            <constraint firstItem="te7-sm-Zsg" firstAttribute="top" secondItem="uTo-Gs-gHu" secondAttribute="bottom" constant="16" id="xqS-9I-eha"/>
+                            <constraint firstItem="DfW-ze-w2z" firstAttribute="leading" secondItem="yt3-hQ-zge" secondAttribute="leading" constant="16" id="1gD-24-smS"/>
+                            <constraint firstItem="yt3-hQ-zge" firstAttribute="trailing" secondItem="DfW-ze-w2z" secondAttribute="trailing" constant="16" id="8kK-Zj-lCC"/>
+                            <constraint firstItem="XxA-tX-5KI" firstAttribute="top" secondItem="yt3-hQ-zge" secondAttribute="top" constant="32" id="GEs-uV-mPy"/>
+                            <constraint firstItem="HZO-ao-FZb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yt3-hQ-zge" secondAttribute="leading" id="HYF-Bm-q6G"/>
+                            <constraint firstItem="yt3-hQ-zge" firstAttribute="trailing" secondItem="XxA-tX-5KI" secondAttribute="trailing" constant="16" id="OYM-fJ-BY3"/>
+                            <constraint firstItem="XxA-tX-5KI" firstAttribute="leading" secondItem="yt3-hQ-zge" secondAttribute="leading" constant="16" id="PeD-EV-Isw"/>
+                            <constraint firstItem="DfW-ze-w2z" firstAttribute="top" secondItem="XxA-tX-5KI" secondAttribute="bottom" constant="12" id="TZ4-Y5-CIO"/>
+                            <constraint firstItem="HZO-ao-FZb" firstAttribute="centerX" secondItem="x57-i5-cJR" secondAttribute="centerX" id="WBd-t3-eL2"/>
+                            <constraint firstItem="yt3-hQ-zge" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HZO-ao-FZb" secondAttribute="trailing" id="b99-8n-CmO"/>
+                            <constraint firstItem="HZO-ao-FZb" firstAttribute="top" secondItem="DfW-ze-w2z" secondAttribute="bottom" constant="32" id="wAq-pQ-fyq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nXI-jj-Ocz"/>
+                    <connections>
+                        <outlet property="tarefaField" destination="DfW-ze-w2z" id="dGL-il-Uyd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8Y-Mv-Z8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="64"/>
+            <point key="canvasLocation" x="2050.934579439252" y="63.498920086393092"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fI6-dA-5Nx">

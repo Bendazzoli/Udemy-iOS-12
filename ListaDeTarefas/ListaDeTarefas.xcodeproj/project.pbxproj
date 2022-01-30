@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		48252B2D27A6F0BC004DDDD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48252B2C27A6F0BC004DDDD6 /* AppDelegate.swift */; };
 		48252B2F27A6F0BC004DDDD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48252B2E27A6F0BC004DDDD6 /* SceneDelegate.swift */; };
-		48252B3127A6F0BC004DDDD6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48252B3027A6F0BC004DDDD6 /* TableViewController.swift */; };
+		48252B3127A6F0BC004DDDD6 /* TarefasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48252B3027A6F0BC004DDDD6 /* TarefasTableViewController.swift */; };
 		48252B3427A6F0BC004DDDD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48252B3227A6F0BC004DDDD6 /* Main.storyboard */; };
 		48252B3627A6F0BD004DDDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48252B3527A6F0BD004DDDD6 /* Assets.xcassets */; };
 		48252B3927A6F0BD004DDDD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48252B3727A6F0BD004DDDD6 /* LaunchScreen.storyboard */; };
 		48252B4127A6F33E004DDDD6 /* AdicionarTarefaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48252B4027A6F33E004DDDD6 /* AdicionarTarefaViewController.swift */; };
+		488A401927A6FAEF0071E3FE /* ListaTarefasUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488A401827A6FAEF0071E3FE /* ListaTarefasUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48252B2927A6F0BC004DDDD6 /* ListaDeTarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaDeTarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48252B2C27A6F0BC004DDDD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48252B2E27A6F0BC004DDDD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48252B3027A6F0BC004DDDD6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		48252B3027A6F0BC004DDDD6 /* TarefasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewController.swift; sourceTree = "<group>"; };
 		48252B3327A6F0BC004DDDD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48252B3527A6F0BD004DDDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48252B3827A6F0BD004DDDD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48252B3A27A6F0BD004DDDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48252B4027A6F33E004DDDD6 /* AdicionarTarefaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarTarefaViewController.swift; sourceTree = "<group>"; };
+		488A401827A6FAEF0071E3FE /* ListaTarefasUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTarefasUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		48252B2B27A6F0BC004DDDD6 /* ListaDeTarefas */ = {
 			isa = PBXGroup;
 			children = (
+				488A401A27A6FB030071E3FE /* Domain */,
+				48252B4227A6F6E9004DDDD6 /* Controller */,
 				48252B2C27A6F0BC004DDDD6 /* AppDelegate.swift */,
 				48252B2E27A6F0BC004DDDD6 /* SceneDelegate.swift */,
-				48252B3027A6F0BC004DDDD6 /* TableViewController.swift */,
 				48252B3227A6F0BC004DDDD6 /* Main.storyboard */,
 				48252B3527A6F0BD004DDDD6 /* Assets.xcassets */,
 				48252B3727A6F0BD004DDDD6 /* LaunchScreen.storyboard */,
 				48252B3A27A6F0BD004DDDD6 /* Info.plist */,
-				48252B4027A6F33E004DDDD6 /* AdicionarTarefaViewController.swift */,
 			);
 			path = ListaDeTarefas;
+			sourceTree = "<group>";
+		};
+		48252B4227A6F6E9004DDDD6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48252B3027A6F0BC004DDDD6 /* TarefasTableViewController.swift */,
+				48252B4027A6F33E004DDDD6 /* AdicionarTarefaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		488A401A27A6FB030071E3FE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				488A401827A6FAEF0071E3FE /* ListaTarefasUserDefaults.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48252B3127A6F0BC004DDDD6 /* TableViewController.swift in Sources */,
+				48252B3127A6F0BC004DDDD6 /* TarefasTableViewController.swift in Sources */,
 				48252B2D27A6F0BC004DDDD6 /* AppDelegate.swift in Sources */,
+				488A401927A6FAEF0071E3FE /* ListaTarefasUserDefaults.swift in Sources */,
 				48252B4127A6F33E004DDDD6 /* AdicionarTarefaViewController.swift in Sources */,
 				48252B2F27A6F0BC004DDDD6 /* SceneDelegate.swift in Sources */,
 			);

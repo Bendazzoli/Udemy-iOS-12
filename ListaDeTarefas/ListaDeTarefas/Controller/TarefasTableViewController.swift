@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TarefasTableViewController.swift
 //  ListaDeTarefas
 //
 //  Created by Paulo Henrique Bendazzoli on 30/01/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TarefasTableViewController: UITableViewController {
     
     let goToAdicionarTarefaViewContrller = "goToAdicionarTarefaViewContrller"
     
@@ -31,5 +31,7 @@ class TableViewController: UITableViewController {
         listaTarefasCell.textLabel?.text = listaTarefas[indexPath.row]
         return listaTarefasCell
     }
+    
+    
 }
 
