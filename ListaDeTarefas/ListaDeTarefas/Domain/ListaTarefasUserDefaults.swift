@@ -13,9 +13,7 @@ class ListaTarefasUserDefaults {
     var listaTarefas: [String] = []
     
     func salvar(tarefa: String){
-        
         listaTarefas = listarTodasTarefas()
-        
         listaTarefas.append(tarefa)
         UserDefaults.standard.set(listaTarefas, forKey: listaTarefasKey)
     }
@@ -28,5 +26,11 @@ class ListaTarefasUserDefaults {
         else {
             return []
         }
+    }
+    
+    func remover(tarefa: Int) {
+        listaTarefas = listarTodasTarefas()
+        listaTarefas.remove(at: tarefa)
+        UserDefaults.standard.set(listaTarefas, forKey: listaTarefasKey)
     }
 }
