@@ -10,16 +10,35 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var btcPrice: UILabel!
+    @IBOutlet weak var descriptionRefreshButton: UIButton!
     
     @IBAction func refreshPrice(_ sender: Any) {
-        
+        self.refreshBitcoinPrice()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshBitcoinPrice()
         
+    }
+    
+    func formatPrice(price: NSNumber) -> String {
+        let nf = NumberFormatter()
+        nf.numberStyle = .currency
+        nf.locale = Locale(identifier: "pt_BR")
+        
+        if let finalPrice = nf.string(from: price) {
+            return finalPrice
+        }
+        return "R$ 0,00"
+    }
+    
+    func refreshBitcoinPrice() {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
+        
+        self.descriptionRefreshButton.setTitle("Atualizando ...", for: .disabled)
         
         guard let url = URL(string: "https://api.coinbase.com/v2/prices/spot?currency=BRL") else {
             fatalError()
@@ -39,7 +58,12 @@ class ViewController: UIViewController {
                 if let result = try JSONSerialization.jsonObject(with: data, options: [])as? [String: Any]{
                     if let dataJson = result["data"] as? [String: String] {
                         if let amount = dataJson["amount"] {
-                            print(Float(amount)!)
+                            let formattedPrice = self.formatPrice(price: NSNumber(value: Double(amount)!))
+                            
+                            DispatchQueue.main.async(execute: {
+                                self.btcPrice.text = "\(formattedPrice)"
+                                self.descriptionRefreshButton.setTitle("Atualizar", for: .normal)
+                            })
                         }
                     }
                 }
