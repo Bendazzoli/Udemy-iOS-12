@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var btcPrice: UILabel!
+    
     @IBOutlet weak var descriptionRefreshButton: UIButton!
     
     @IBAction func refreshPrice(_ sender: Any) {
@@ -40,6 +41,16 @@ class ViewController: UIViewController {
         
         self.descriptionRefreshButton.setTitle("Atualizando ...", for: .disabled)
         
+        /*
+         JSON FORMAT EXAMPLE
+         {
+            "data":{
+                "base":"BTC",
+                "currency":"BRL",
+                "amount":"222304.309066"
+            }
+         }
+         */
         guard let url = URL(string: "https://api.coinbase.com/v2/prices/spot?currency=BRL") else {
             fatalError()
         }
