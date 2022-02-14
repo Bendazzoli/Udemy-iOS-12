@@ -16,20 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-1h-vzh">
-                                <rect key="frame" x="16" y="437.5" width="382" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ues-eH-tkI">
+                                <rect key="frame" x="0.0" y="329.5" width="414" height="237"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-aQ-rtn">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="84.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-1h-vzh">
+                                        <rect key="frame" x="149.5" y="116.5" width="115.5" height="57.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
+                                        <color key="textColor" red="0.99978166820000003" green="0.58127158879999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-Xv-4hZ">
+                                        <rect key="frame" x="137" y="206" width="140.5" height="31"/>
+                                        <color key="tintColor" red="0.99978166820000003" green="0.58127158879999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title="   Refresh Price"/>
+                                        <connections>
+                                            <action selector="refreshPrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rm2-tg-YZR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WJJ-aQ-rtn" secondAttribute="trailing" constant="16" id="A1g-Om-EV5"/>
+                                    <constraint firstItem="WJJ-aQ-rtn" firstAttribute="leading" secondItem="ues-eH-tkI" secondAttribute="leading" constant="16" id="b8q-iS-eaC"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SAC-1h-vzh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4jc-bM-LVP"/>
-                            <constraint firstItem="SAC-1h-vzh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rmw-gm-1kw"/>
-                            <constraint firstItem="SAC-1h-vzh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iBm-QC-s99"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SAC-1h-vzh" secondAttribute="trailing" constant="16" id="rDQ-c0-b1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ues-eH-tkI" secondAttribute="trailing" id="LGd-Ox-roE"/>
+                            <constraint firstItem="ues-eH-tkI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="chg-Ly-saX"/>
+                            <constraint firstItem="ues-eH-tkI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sTa-2i-xpD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -38,10 +58,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="89"/>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="bitcoin" width="400" height="84.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

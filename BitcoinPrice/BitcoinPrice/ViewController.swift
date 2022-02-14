@@ -11,6 +11,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btcPrice: UILabel!
     
+    @IBAction func refreshPrice(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
